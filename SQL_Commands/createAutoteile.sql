@@ -41,7 +41,7 @@ CREATE TABLE `Product` (
 	`product_id` INT NOT NULL AUTO_INCREMENT,
 	`categoryprod_id` INT NOT NULL,
 	`name` VARCHAR(40) NOT NULL,
-    `price` DECIMAL,
+    `price` DECIMAL(7,2),
 	`availible_count` INT,
 	`discount` INT,
     PRIMARY KEY(`product_id`),
@@ -70,7 +70,7 @@ CREATE TABLE `Product_Car` (
     )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
              
     
-CREATE TABLE DeliveryAdress(
+CREATE TABLE `DeliveryAdress`(
 	`adress_id` INT NOT NULL AUTO_INCREMENT,
     `country` VARCHAR(40) NOT NULL,
     `city` VARCHAR(180) NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE DeliveryAdress(
 	PRIMARY KEY(`adress_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE Customer(
+CREATE TABLE `Customer`(
 	`customer_id` INT NOT NULL AUTO_INCREMENT,
     `adress_id` INT NOT NULL,
     `name` VARCHAR(20) NOT NULL,
@@ -94,19 +94,19 @@ CREATE TABLE Customer(
     FOREIGN KEY(`adress_id`) REFERENCES `DeliveryAdress`(`adress_id`) 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE Orderr(
+CREATE TABLE `Orderr`(
 	`order_id` INT NOT NULL AUTO_INCREMENT,
     `customer_id` INT NOT NULL,
     `transaction_nr` INT NOT NULL,
     `if_paid` TINYINT(1),
     `if_sent` TINYINT(1),
-    `discount_decimal` INT,
     `order_date` DATETIME,
     PRIMARY KEY(`order_id`),
-    FOREIGN KEY(`customer_id`) REFERENCES `Customer`(`customer_id`)
+    FOREIGN KEY(`customer_id`) REFERENCES `Customer`(`customer_id`),
+    UNIQUE(`transaction_nr`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE Order_Product(
+CREATE TABLE `Order_Product`(
 	`orderprod_id` INT NOT NULL AUTO_INCREMENT,
     `order_id` INT NOT NULL,
     `product_id` INT NOT NULL,
