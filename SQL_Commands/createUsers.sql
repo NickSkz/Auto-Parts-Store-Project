@@ -1,0 +1,3 @@
+CREATE USER 'ADMIN'@localhost IDENTIFIED BY 'admin1';
+CREATE USER 'WORKER'@localhost IDENTIFIED BY 'worker1';
+CREATE USER 'USER'@localhost IDENTIFIED BY 'user1';

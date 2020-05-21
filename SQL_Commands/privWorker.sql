@@ -1,1 +1,0 @@
-GRANT SELECT, INSERT, DELETE, UPDATE ON autoteile.* TO 'WORKER'@'localhost';
