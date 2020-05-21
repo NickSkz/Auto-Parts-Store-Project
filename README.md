@@ -7,5 +7,5 @@ In order to set the dateabase on localhost execute .sql files in the following o
 4. createTrigger.sql
 5. createViews.sql
 6. createUsers.sql
-7. grantPrivilages.sql
+7. grantPrivileges.sql
 8. insertRecords.sql
