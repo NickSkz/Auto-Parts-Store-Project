@@ -5,27 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Auto_Parts_Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="457" Width="654" Background="DarkGray">
+        Title="Store" Height="457" Width="654" Background="DarkCyan">
     <Grid>
         <Label Content="Name" HorizontalAlignment="Left" Margin="40,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
-        <TextBox HorizontalAlignment="Left" Margin="40,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="40,231,0,0" VerticalAlignment="Top" Width="180" Height="25"/>
+        <TextBox HorizontalAlignment="Left" Margin="40,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="40,231,0,0" VerticalAlignment="Top" Width="180" Height="25" FontSize="20"/>
         <Label Content="Create Your Account!" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Height="39" Width="248" FontSize="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="40,133,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="40,181,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="40,332,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="40,284,0,0" VerticalAlignment="Top" Width="180" Height="25"/>
+        <TextBox HorizontalAlignment="Left" Margin="40,133,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="40,181,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="40,332,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="40,284,0,0" VerticalAlignment="Top" Width="180" Height="25" FontSize="20"/>
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="40,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="40,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="40,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="40,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="Phone" HorizontalAlignment="Left" Margin="40,306,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,83,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,133,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,181,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,229,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="27"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,284,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,332,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,83,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,133,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,181,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" TextChanged="TextBox_TextChanged" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,229,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="27" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,284,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="25" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,332,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="24" FontSize="20"/>
         <Label Content="Country" HorizontalAlignment="Left" Margin="415,57,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="City" HorizontalAlignment="Left" Margin="415,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
         <Label Content="Street" HorizontalAlignment="Left" Margin="415,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.31"/>
