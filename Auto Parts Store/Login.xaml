@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Store" Height="450" Width="420" Background="DarkCyan">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="52,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Height="36" FontSize="24"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="53,218,0,0" VerticalAlignment="Top" Width="313" Height="36" FontSize="24"/>
+        <TextBox Name ="loginTxt" HorizontalAlignment="Left" Margin="52,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Height="36" FontSize="24"/>
+        <PasswordBox Name ="passTxt" HorizontalAlignment="Left" Margin="53,218,0,0" VerticalAlignment="Top" Width="313" Height="36" FontSize="24"/>
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="52,103,0,0" VerticalAlignment="Top" Width="254" FontSize="20"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="49,181,0,0" VerticalAlignment="Top" Width="253" FontSize="20"/>
         <Label Content="AUTO PARTS STORE" HorizontalAlignment="Left" Margin="39,23,0,0" VerticalAlignment="Top" Width="340" Height="49" FontSize="35"/>
         <Label Content="New to the service? Sign up now!" HorizontalAlignment="Left" Height="36" Margin="36,348,0,0" VerticalAlignment="Top" Width="286" FontSize="18"/>
-        <Button Content="Sign Up!" HorizontalAlignment="Left" Height="37" Margin="322,349,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button Content="Sign Up!" HorizontalAlignment="Left" Height="37" Margin="322,349,0,0" VerticalAlignment="Top" Width="65" Click="Button_Click_1"/>
         <Button Content="Log In" HorizontalAlignment="Left" Margin="156,277,0,0" VerticalAlignment="Top" Height="42" Width="106" Click="Button_Click"/>
 
     </Grid>

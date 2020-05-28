@@ -12,12 +12,12 @@
             <ColumnDefinition Width="193*"/>
         </Grid.ColumnDefinitions>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" Text="Search Part" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Height="24"/>
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="10,51,0,0" VerticalAlignment="Top" Width="206"/>
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="221,51,0,0" VerticalAlignment="Top" Width="206"/>
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="432,51,0,0" VerticalAlignment="Top" Width="206"/>
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="235" Margin="10,285,0,0" VerticalAlignment="Top" Width="628"/>
+        <ListBox Name ="higherCatLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="10,51,0,0" VerticalAlignment="Top" Width="206"/>
+        <ListBox Name ="catLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="221,51,0,0" VerticalAlignment="Top" Width="206"/>
+        <ListBox Name ="carLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="432,51,0,0" VerticalAlignment="Top" Width="206"/>
+        <ListBox Name ="productLst" Grid.Column="1" HorizontalAlignment="Left" Height="235" Margin="10,285,0,0" VerticalAlignment="Top" Width="628"/>
         <Label Content="Cart" Grid.Column="1" HorizontalAlignment="Left" Margin="680,27,0,0" VerticalAlignment="Top" Height="29" Width="127" FontSize="18"/>
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="326" Margin="680,63,0,0" VerticalAlignment="Top" Width="282"/>
+        <ListBox Name="cartLst" Grid.Column="1" HorizontalAlignment="Left" Height="326" Margin="680,63,0,0" VerticalAlignment="Top" Width="282"/>
         <Button Content="Make the order" Grid.Column="1" HorizontalAlignment="Left" Margin="680,468,0,0" VerticalAlignment="Top" Height="52" Width="282"/>
         <Label Content="Total: " Grid.Column="1" HorizontalAlignment="Left" Margin="680,394,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="XXX PLN" Grid.Column="1" HorizontalAlignment="Left" Margin="737,394,0,0" VerticalAlignment="Top" Width="117" FontSize="18"/>
@@ -25,7 +25,7 @@
         <Label Content="XX %" Grid.Column="1" HorizontalAlignment="Left" Margin="775,428,0,0" VerticalAlignment="Top"/>
         <Button Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="566,22,0,0" VerticalAlignment="Top" Height="24" Width="72"/>
         <Label Content="Customer: " Grid.Column="1" HorizontalAlignment="Left" Margin="680,3,0,0" VerticalAlignment="Top" Width="63"/>
-        <Label Content="Waldemar Pudzianowski" Grid.Column="1" HorizontalAlignment="Left" Margin="743,3,0,0" VerticalAlignment="Top" Width="144"/>
+        <Label Name ="currUserTxt" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="743,3,0,0" VerticalAlignment="Top" Width="144"/>
         <Button Content="Edit profile" Grid.Column="1" HorizontalAlignment="Left" Margin="892,6,0,0" VerticalAlignment="Top" Height="20" Width="70"/>
 
     </Grid>
