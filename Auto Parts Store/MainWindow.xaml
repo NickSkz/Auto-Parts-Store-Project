@@ -26,7 +26,8 @@
         <Button Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="566,22,0,0" VerticalAlignment="Top" Height="24" Width="72"/>
         <Label Content="Customer: " Grid.Column="1" HorizontalAlignment="Left" Margin="680,3,0,0" VerticalAlignment="Top" Width="63"/>
         <Label Name ="currUserTxt" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="743,3,0,0" VerticalAlignment="Top" Width="144"/>
-        <Button Content="Edit profile" Grid.Column="1" HorizontalAlignment="Left" Margin="892,6,0,0" VerticalAlignment="Top" Height="20" Width="70"/>
+        <Button Content="Edit profile" Grid.Column="1" HorizontalAlignment="Left" Margin="892,6,0,0" VerticalAlignment="Top" Height="20" Width="70" Click="Button_Click_1"/>
+        <Button Content="Show Previous Orders" Grid.Column="1" HorizontalAlignment="Left" Margin="838,401,0,0" VerticalAlignment="Top" Height="27" Width="124" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

@@ -306,5 +306,16 @@ namespace Auto_Parts_Store
             totalCostLbl.Content = totalCost.ToString() + "PLN";
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UpdateInfo updateWindow = new UpdateInfo();
+            updateWindow.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            PreviousOrders prevOrders = new PreviousOrders();
+            prevOrders.ShowDialog();
+        }
     }
 }

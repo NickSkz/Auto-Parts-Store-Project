@@ -1,0 +1,15 @@
+﻿<Window x:Class="Auto_Parts_Store.PreviousOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Auto_Parts_Store"
+        mc:Ignorable="d"
+        Title="PreviousOrders" Height="443" Width="739" Background="DarkCyan">
+    <Grid>
+        <ListBox Name ="ordLst" HorizontalAlignment="Left" Height="309" VerticalAlignment="Center" Width="276" Margin="42,0,0,0" SelectionMode="Single" MouseDoubleClick="ordLst_MouseDoubleClick" />
+        <ListBox x:Name ="prdLst" HorizontalAlignment="Left" Height="309" VerticalAlignment="Center" Width="276" Margin="412,0,0,0" />
+        <Label Content="Your Previous Orders!" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.472,0.06" FontSize="16pt"/>
+
+    </Grid>
+</Window>

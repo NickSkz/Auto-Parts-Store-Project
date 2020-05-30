@@ -30,10 +30,6 @@ namespace Auto_Parts_Store
             connection = new DBConnect();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
