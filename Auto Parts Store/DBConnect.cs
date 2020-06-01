@@ -18,8 +18,8 @@ namespace Auto_Parts_Store
         {
             MySqlConnectionStringBuilder credentials = new MySqlConnectionStringBuilder();
             credentials.Server = "127.0.0.1";
-            credentials.UserID = "root";
-            credentials.Password = "1234";
+            credentials.UserID = "USER";
+            credentials.Password = "user1";
             credentials.Database = "autoteile";
 
             String connStr = credentials.ToString();
