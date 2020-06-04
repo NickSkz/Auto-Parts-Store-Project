@@ -11,7 +11,7 @@
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="193*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" Text="Search Part" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Height="24"/>
+        <TextBox Name="searchTxt" Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" Text="Search Part" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Height="24"/>
         <ListBox Name ="higherCatLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="10,51,0,0" VerticalAlignment="Top" Width="206" SelectionMode="Single" MouseDoubleClick="higherCatLst_DoubleClick" />
         <ListBox Name ="catLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="221,51,0,0" VerticalAlignment="Top" Width="206" SelectionMode="Single" MouseDoubleClick="catLst_DoubleClick"/>
         <ListBox Name ="carLst" Grid.Column="1" HorizontalAlignment="Left" Height="217" Margin="432,51,0,0" VerticalAlignment="Top" Width="206" SelectionMode="Single" MouseDoubleClick="carLst_DoubleClick"/>
@@ -23,7 +23,7 @@
         <Label Name ="totalCostLbl" Content="0 PLN" Grid.Column="1" HorizontalAlignment="Left" Margin="737,394,0,0" VerticalAlignment="Top" Width="117" FontSize="18"/>
         <Label Content="Client discount: " Grid.Column="1" HorizontalAlignment="Left" Margin="680,428,0,0" VerticalAlignment="Top"/>
         <Label Content="XX %" Grid.Column="1" HorizontalAlignment="Left" Margin="775,428,0,0" VerticalAlignment="Top"/>
-        <Button Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="566,22,0,0" VerticalAlignment="Top" Height="24" Width="72"/>
+        <Button Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="566,22,0,0" VerticalAlignment="Top" Height="24" Width="72" Click="Button_Click_3"/>
         <Label Content="Customer: " Grid.Column="1" HorizontalAlignment="Left" Margin="680,3,0,0" VerticalAlignment="Top" Width="63"/>
         <Label Name ="currUserTxt" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="743,3,0,0" VerticalAlignment="Top" Width="144"/>
         <Button Content="Edit profile" Grid.Column="1" HorizontalAlignment="Left" Margin="892,6,0,0" VerticalAlignment="Top" Height="20" Width="70" Click="Button_Click_1"/>

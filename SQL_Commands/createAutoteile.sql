@@ -6,14 +6,14 @@ SET NAMES utf8 ;
 
 CREATE TABLE `HigherCategory`(
 	`highercategory_id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(30) NOT NULL,
+    `name` VARCHAR(30) NOT NULL UNIQUE,
     PRIMARY KEY(`highercategory_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Category`(
 	`category_id` INT NOT NULL AUTO_INCREMENT,
     `highercategory_id` INT NOT NULL,
-    `name` VARCHAR(30) NOT NULL,
+    `name` VARCHAR(30) NOT NULL UNIQUE,
     PRIMARY KEY(`category_id`),
     FOREIGN KEY(`highercategory_id`) REFERENCES `HigherCategory`(`highercategory_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -21,7 +21,7 @@ CREATE TABLE `Category`(
 
 CREATE TABLE `Manufacturer`(
 	`manufacturer_id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(30),
+    `name` VARCHAR(30) UNIQUE,
     `country` VARCHAR(30),
     PRIMARY KEY(`manufacturer_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -40,7 +40,7 @@ CREATE TABLE `Category_Producent`(
 CREATE TABLE `Product` (
 	`product_id` INT NOT NULL AUTO_INCREMENT,
 	`categoryprod_id` INT NOT NULL,
-	`name` VARCHAR(40) NOT NULL,
+	`name` VARCHAR(40) NOT NULL UNIQUE,
     `price` DECIMAL(7,2),
 	`availible_count` INT,
 	`discount` INT,
@@ -86,7 +86,7 @@ CREATE TABLE `Customer`(
     `adress_id` INT NOT NULL,
     `name` VARCHAR(20) NOT NULL,
     `last_name` VARCHAR(30) NOT NULL,
-    `e_mail` TEXT NOT NULL,
+    `e_mail` VARCHAR(70) NOT NULL UNIQUE,
     `password` VARCHAR(20) NOT NULL,
     `phone` VARCHAR(9),
     `system_rank` VARCHAR(20) NOT NULL,

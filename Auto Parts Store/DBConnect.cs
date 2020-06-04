@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace Auto_Parts_Store
 {
@@ -24,7 +25,14 @@ namespace Auto_Parts_Store
 
             String connStr = credentials.ToString();
 
-            Con = new MySqlConnection(connStr);
+            try
+            {
+                Con = new MySqlConnection(connStr);
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show("Connection to Database failed!", ":(", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

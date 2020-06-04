@@ -49,7 +49,20 @@ namespace Auto_Parts_Store
             if (!samePassword(passBx.Password, pass2Bx.Password)) 
                 return;
 
-            int customerId = insertCustomer(insertAdressRecords());
+            int customerId = -1;
+
+            try
+            {
+                customerId = insertCustomer(insertAdressRecords());
+            }
+            catch(MySqlException ex)
+            {
+                if (ex.Code == 1169)
+                {
+                    MessageBox.Show("Credentials already in use!", "Try again!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                return;
+            }
 
             CurrentUser.id = customerId;
             CurrentUser.name = nameTxt.Text;
@@ -89,8 +102,21 @@ namespace Auto_Parts_Store
 
             connection.Con.Open();
 
-            cmd.ExecuteReader();
-            int lastCustomerId = (int)cmd.LastInsertedId;
+            int lastCustomerId = 1;
+
+            try
+            {
+                cmd.ExecuteReader();
+                lastCustomerId = (int)cmd.LastInsertedId;
+            }
+            catch (Exception e)
+            {
+                cmd.CommandText = $"DELETE FROM deliveryadress WHERE deliveryadress_id = {adressId}";
+                cmd.ExecuteReader();
+                connection.Con.Close();
+
+                throw e;
+            }
 
             connection.Con.Close();
 

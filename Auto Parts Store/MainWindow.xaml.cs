@@ -218,12 +218,17 @@ namespace Auto_Parts_Store
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
             dataAdapter.Fill(dataTable);
 
+            int transNR = -1;
+            DataRow row = null;
+
             int howManyRecords = Convert.ToInt32(dataTable.Rows.Count.ToString());
-            if (howManyRecords != 1) return;
-
-            DataRow row = dataTable.Rows[0];
-            int transNR = (int)row["transaction_nr"] + 1;
-
+            if (howManyRecords == 0) transNR = 1;
+            else if (howManyRecords != 1) return;
+            else
+            {
+                row = dataTable.Rows[0];
+                transNR = (int)row["transaction_nr"] + 1;
+            }
 
             string query = $"INSERT INTO orderr(customer_id, transaction_nr, if_paid, if_sent, order_date) VALUES ({CurrentUser.id}, {transNR}, {0}, {0}, '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}')";
             cmd.CommandText = query;
@@ -310,12 +315,54 @@ namespace Auto_Parts_Store
         {
             UpdateInfo updateWindow = new UpdateInfo();
             updateWindow.ShowDialog();
+            currUserTxt.Content = CurrentUser.name + " " + CurrentUser.last_name;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             PreviousOrders prevOrders = new PreviousOrders();
             prevOrders.ShowDialog();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (connection.Con.State == ConnectionState.Open) return;
+
+            productLst.Items.Clear();
+
+            string query = @$"SELECT p.name, c.name AS cname, p.price, p.availible_count, p.discount, m.country FROM product p
+
+                            INNER JOIN category_producent cp
+                            ON p.categoryprod_id = cp.categoryprod_id
+
+                            INNER JOIN category c
+                            ON cp.category_id = c.category_id
+
+                            INNER JOIN manufacturer m
+                            ON cp.manufacturer_id = m.manufacturer_id
+
+                            WHERE p.name LIKE '{searchTxt.Text}%'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection.Con);
+
+            connection.Con.Open();
+
+            DataTable dataTable = new DataTable();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+            dataAdapter.Fill(dataTable);
+
+            int howManyRecords = Convert.ToInt32(dataTable.Rows.Count.ToString());
+            for (int i = 0; i < howManyRecords; ++i)
+            {
+                DataRow row = dataTable.Rows[i];
+
+                if (!row.IsNull("discount"))
+                    productLst.Items.Add(row["name"] + ", " + row["price"] + "zł;  " + row["cname"] + ",  " + row["country"] + ",  " + row["availible_count"] + "szt.,  discount: " + row["discount"]);
+                else
+                    productLst.Items.Add(row["name"] + ", " + row["price"] + "zł;  " + row["cname"] + ",  " + row["country"] + ",  " + row["availible_count"] + "szt.,  discount: " + "0%");
+            }
+
+            connection.Con.Close();
         }
     }
 }

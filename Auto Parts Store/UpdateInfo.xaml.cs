@@ -86,7 +86,19 @@ namespace Auto_Parts_Store
 
             connection.Con.Open();
 
-            cmd3.ExecuteReader();
+            try
+            {
+                cmd3.ExecuteReader();
+            }
+            catch(MySqlException ex)
+            {
+                if (ex.Code == 1169)
+                {
+                    MessageBox.Show("Credentials already in use!", "Try again!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                connection.Con.Close();
+                return;
+            }
 
             connection.Con.Close();
 
