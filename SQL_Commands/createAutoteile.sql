@@ -87,7 +87,7 @@ CREATE TABLE `Customer`(
     `name` VARCHAR(20) NOT NULL,
     `last_name` VARCHAR(30) NOT NULL,
     `e_mail` VARCHAR(70) NOT NULL UNIQUE,
-    `password` VARCHAR(20) NOT NULL,
+    `password` VARCHAR(32) NOT NULL,
     `phone` VARCHAR(9),
     `system_rank` VARCHAR(20) NOT NULL,
     PRIMARY KEY(`customer_id`),

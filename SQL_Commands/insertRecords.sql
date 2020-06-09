@@ -1738,4 +1738,4 @@ insert into product_car (productcar_id, product_id, car_id) values (1000, 80, 14
 
 
 CALL insert_deliveryAdress('TestCountry', 'TestCity', 'TestStreet', '134A', '8', '72-035');
-CALL insert_customer(1, 'TestName', 'TestLastName', 'example@example.com', 'pogon', '96235266', 'admin')
+CALL insert_customer(1, 'TestName', 'TestLastName', 'example@example.com', 'pogon', '96235266', 'ADMIN')

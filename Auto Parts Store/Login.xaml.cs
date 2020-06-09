@@ -34,7 +34,7 @@ namespace Auto_Parts_Store
             if (passTxt.Equals("")) return;
 
 
-            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM customer WHERE e_mail = '{loginTxt.Text}' AND password = '{passTxt.Password}'" ,connection.Con);
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM customer WHERE e_mail = '{loginTxt.Text}' AND password = '{DBConnect.Encrypt(passTxt.Password)}'" ,connection.Con);
 
             connection.Con.Open();
 

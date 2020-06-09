@@ -81,7 +81,7 @@ namespace Auto_Parts_Store
 
 
             MySqlCommand cmd3 = new MySqlCommand(@$"UPDATE customer
-                                                  SET name = '{nameTxt.Text}', last_name  = '{LastNTxt.Text}', e_mail = '{emailTxt.Text}', password = '{passBx.Password}', phone = '{phoneTxt.Text}' 
+                                                  SET name = '{nameTxt.Text}', last_name  = '{LastNTxt.Text}', e_mail = '{emailTxt.Text}', password = '{DBConnect.Encrypt(passBx.Password)}', phone = '{phoneTxt.Text}' 
                                                   WHERE customer_id = {CurrentUser.id}", connection.Con);
 
             connection.Con.Open();

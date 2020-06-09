@@ -98,7 +98,7 @@ namespace Auto_Parts_Store
         private int insertCustomer(int adressId)
         {
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO customer(adress_id, name, last_name, e_mail, password, phone, system_rank) " +
-                $"VALUES ('{adressId}', '{nameTxt.Text}', '{LastNTxt.Text}', '{emailTxt.Text}', '{passBx.Password}', '{phoneTxt.Text}', 'USER')", connection.Con);
+                $"VALUES ('{adressId}', '{nameTxt.Text}', '{LastNTxt.Text}', '{emailTxt.Text}', '{DBConnect.Encrypt(passBx.Password)}', '{phoneTxt.Text}', 'USER')", connection.Con);
 
             connection.Con.Open();
 
@@ -122,5 +122,9 @@ namespace Auto_Parts_Store
 
             return lastCustomerId;
         }
+
+
+        
+
     }
 }
